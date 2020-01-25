@@ -13,7 +13,7 @@ steps:
 - script: CHDIR
 - script: DIR
   displayName: 'SHOW WORKING DIR'
-- powershell: Install-Package SecurityCodeScan.VS2017 -Version 3.4.0
+- powershell: dotnet add package SecurityCodeScan.VS2017 --version 3.4.0
 #- script: docker run --rm --volume %cd%\WebGoat:C:\app -w c:\app microsoft/dotnet:runtime add src/WebGoat.NET.csproj package SecurityCodeScanVS2017
   displayName: 'Run Scanner'
 - task: MSBuild@1
