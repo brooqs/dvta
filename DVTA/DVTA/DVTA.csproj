@@ -53,8 +53,8 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+        <PackageReference Include="SecurityCodeScan" Version="3.4.0" PrivateAssets="all" />
     <Reference Include="EntityFramework">
-    <PackageReference Include="SecurityCodeScan" Version="3.4.0" PrivateAssets="all" />
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="ExcelLibrary">
