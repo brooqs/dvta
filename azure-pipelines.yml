@@ -15,7 +15,7 @@ steps:
   displayName: 'SHOW WORKING DIR'
 #- powershell: dotnet add WebGoat\WebGoat.NET.csproj package SecurityCodeScan.VS2017 --version 3.4.0
 #- script: docker run --rm --volume %cd%\WebGoat:C:\app -w c:\app microsoft/dotnet:runtime add src/WebGoat.NET.csproj package SecurityCodeScanVS2017
-- script: ls -lah && docker run --rm --volume $PWD/DVTA/DVTA:/tmp/app -w /tmp/app mcr.microsoft.com/dotnet/core/sdk:3.1 dotnet add DVTA.csproj package SecurityCodeScan.VS2017 --version 3.4.0 && cd .. && sudo chown -R vsts:vsts * && dotnet build
+- script: ls -lah && docker run --rm --volume $PWD/DVTA:/tmp/app -w /tmp/app mcr.microsoft.com/dotnet/core/sdk:3.1 dotnet add DVTA/DVTA.csproj package SecurityCodeScan.VS2017 --version 3.4.0 && sudo chown -R vsts:vsts * && dotnet build
   displayName: 'Pre Build'
 #- script: msbuild
 #  displayName: 'Building'
